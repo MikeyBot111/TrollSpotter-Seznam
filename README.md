@@ -10,7 +10,7 @@ TrollSpotter for Seznam.cz is a Chrome extension designed to help users identify
 #### Download extension from Chrome Web Store
 `https://`
 
-#### Install localy
+#### Install locally
 
 1. Clone this repository to your local machine or download the ZIP file.
    
