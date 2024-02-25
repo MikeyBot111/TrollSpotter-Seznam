@@ -8,7 +8,7 @@ TrollSpotter for Seznam.cz is a Chrome extension designed to help users identify
 ### Installation 
 
 #### Download extension from Chrome Web Store
-`https://`
+`https://chrome.google.com/webstore/detail/trollspotter-for-seznam-cz/gllikmfcfkfdoocdeapnoldlamjnalcm`
 
 #### Install locally
 
@@ -45,7 +45,7 @@ TrollSpotter for Seznam.cz je rozšíření pro Chrome, které pomáhá uživate
 ### Instalace 
 
 #### Stáhnout rozšíření z Chrome Web Store
-`https://`
+`https://chrome.google.com/webstore/detail/trollspotter-for-seznam-cz/gllikmfcfkfdoocdeapnoldlamjnalcm`
 
 #### Instalace lokálně
 
