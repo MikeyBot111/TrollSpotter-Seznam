@@ -1,7 +1,7 @@
 const apiEndpoint = "https://mikeysnest.dev/api/v1/anti-kreml-seznam";
 
 function getUserById(userId) {
-    const params = new URLSearchParams({ key: "jhrZOMCiCpM7yoHPjqA5VgiseCIKJ8xE", id: userId });
+    const params = new URLSearchParams({ key: "jhrZOMCiCpM7yoHPjqA5VgiseCIKJ8xE", userid: userId });
     const url = `${apiEndpoint}/getuserbyid?${params}`;
 
     return fetch(url)

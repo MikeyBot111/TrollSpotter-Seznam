@@ -22,21 +22,18 @@ function createInterval(timeout) {
         for (const user of users) {
             const parent = user.parentElement;
             
-            if (!parent.hasAttribute('href')) continue;
+            if (!parent.hasAttribute('href') && !hasElement(parent.parentElement, 'troll-checked')) continue;
             
             const id = parent.href.split('/profil/')[1];
-            const userInfo = await getUserInfo(id)["Data"];
+            let userInfo = await getUserInfo(id);
 
-            if (!((userInfo["IsTroll"] || userInfo["IsSus"]) && !hasElement(parent.parentElement, 'troll-id'))) continue;
-            
             const trollElement = document.createElement("p");
-            trollElement.id = "troll-id";
-            trollElement.style = "border-radius: 50px;padding: 2.25px 8px 0px 8px;font-size: 9px;margin-left: 2px;font-weight: 1000;font-family: monospace;";
-            if (userInfo["IsTroll"]) {
-                trollElement.style += "background-color: #FF4760;color: white;";
+            trollElement.id = "troll-checked";
+            if (userInfo["Success"] && userInfo["Data"]["IsTroll"] && !hasElement(parent.parentElement, 'troll-checked')) {
+                trollElement.style = "background-color: #FF4760;color: white; border-radius: 50px;padding: 2.25px 8px 0px 8px;font-size: 9px;margin-left: 2px;font-weight: 1000;font-family: monospace;";
                 trollElement.innerText = "Troll";
-            } else if (userInfo["IsSus"]) {
-                trollElement.style += "background-color: #FFF947;color: black;";
+            } else if (userInfo["Success"] && userInfo["Data"]["IsSus"] && !hasElement(parent.parentElement, 'troll-checked')) {
+                trollElement.style = "background-color: #FFB447;color: black; border-radius: 50px;padding: 2.25px 8px 0px 8px;font-size: 9px;margin-left: 2px;font-weight: 1000;font-family: monospace;";
                 trollElement.innerText = "Sus";
             }
             parent.parentElement.appendChild(trollElement);
